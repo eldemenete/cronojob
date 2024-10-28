@@ -15,6 +15,7 @@ class ClienteAdapter(private val clientes: List<Cliente>, private val onDelete: 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nombreTextView: TextView = view.findViewById(R.id.tv_nombre_cliente)
         val correoTextView: TextView = view.findViewById(R.id.tv_correo)
+        val telefonoTextView: TextView = view.findViewById(R.id.tv_Telefono)
         val btnDelete: Button = view.findViewById(R.id.btn_delete_cliente)
     }
 
@@ -27,6 +28,7 @@ class ClienteAdapter(private val clientes: List<Cliente>, private val onDelete: 
         val cliente = clientes[position]
         holder.nombreTextView.text = cliente.nombre
         holder.correoTextView.text = cliente.correo
+        holder.telefonoTextView.text = cliente.telefono
         holder.btnDelete.setOnClickListener { onDelete(cliente) }
     }
 

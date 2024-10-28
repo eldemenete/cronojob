@@ -1,6 +1,6 @@
 package com.example.cronojob.repositorio
-import com.example.cronojob.model.Trabajador
 import com.example.cronojob.model.Cliente
+import com.example.cronojob.model.Trabajador
 
 object Repositorio {
     private val trabajadores = mutableListOf<Trabajador>()

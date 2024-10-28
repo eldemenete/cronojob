@@ -93,12 +93,14 @@ class HomeFragment : Fragment() {
 
         val nombreInput = dialogView.findViewById<EditText>(R.id.et_nombre_cliente)
         val correoInput = dialogView.findViewById<EditText>(R.id.et_correo)
+        val telefonoInput = dialogView.findViewById<EditText>(R.id.tv_Telefono)
 
         dialog.setPositiveButton("Agregar") { _, _ ->
             val nombre = nombreInput.text.toString()
             val correo = correoInput.text.toString()
+            val telefono = telefonoInput.text.toString()
             val id = Repositorio.getClientes().size + 1 // Generar ID simple
-            val nuevoCliente = Cliente(id, nombre, correo)
+            val nuevoCliente = Cliente(id, nombre, correo, telefono)
             Repositorio.addCliente(nuevoCliente)
             actualizarListas()
         }
